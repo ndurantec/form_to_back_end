@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Principal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Sistema de Controle de Alimentos</h1>
+    </header>
+    
+    <!-- Menu de Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#cadastro">Cadastro</a></li>
+            <li><a href="#estoque">Estoque</a></li>
+            <li><a href="#relatorios">Relatórios</a></li>
+            <li><a href="#logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <h2>Bem-vindo ao Sistema de Controle de Alimentos</h2>
+        <p>Utilize o menu acima para navegar pelo sistema.</p>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Sistema de Controle de Alimentos</p>
+        <p id="datetime"></p>
+    </footer>
+
+    <script>
+        // Script para mostrar a data e hora atual no rodapé
+        function updateDateTime() {
+            const now = new Date();
+            const formattedDate = now.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            const formattedTime = now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            document.getElementById('datetime').textContent = `Data e Hora Atual: ${formattedDate} ${formattedTime}`;
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000); // Atualiza a cada segundo
+    </script>
+</body>
+</html>
