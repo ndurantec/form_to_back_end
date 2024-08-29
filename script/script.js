@@ -19,7 +19,7 @@ document.getElementById('cadastro_professor').addEventListener('submit', functio
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error('Erro ao tentar salvar');
         } else {
             console.log("Foi ao servidor e voltou com sucesso");
             window.location.href = 'sucesso.html'; // Redireciona para a página de sucesso
