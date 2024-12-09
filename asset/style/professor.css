@@ -76,3 +76,7 @@ body {
     background: #4CAF50;
     color: #fff;  
   }
+
+  button:hover {
+    background-color: #3e8e41;
+  }
